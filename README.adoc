@@ -1,0 +1,61 @@
+= SBuild Adept Plugin
+:pluginversion: 0.0.9000
+
+This SBuild plugin integrates http://asciidoctor.org[Asciidoctor] into http://sbuild.tototec.de[SBuild].
+
+== Download
+
+SBuild Asciidoctor Plugin can be downloaded from http://repo1.maven.org/maven2/org/sbuild/org.sbuild.plugins.asciidoctor/[Maven Central].
+
+To include it in you SBuild buildfile use the `@classpath` annotation:
+
+[source,scala]
+[subs="attributes"]
+----
+@classpath("mvn:org.sbuild:org.sbuild.plugins.asciidoctor:{pluginversion}")
+----
+
+== Building from Source
+
+You need a recent version of SBuild.
+
+----
+git clone https://github.com/SBuild-org/asciidoctor.git
+cd sbuild-sbuild-plugin/org.sbuild.plugins.asciidoctor
+sbuild all
+----
+
+You will find the built jar in the directory `org.sbuild.plugins.asciidoctor/target`.
+
+== Requirements
+
+This plugin requires at least SBuild 0.7.1.
+
+== Configuration
+
+All configurable properties are documented via ScalaDoc. See file link:org.sbuild.plugins.asciidoctor/src/main/scala/org/sbuild/plugins/asciidoctor/Asciidoctor.scala[`Asciidoctor.scala`].
+
+== Examples
+
+Minimal example, which will generate a jbake site from `src/asciidoc` to `target/asciidoc`.
+
+[source,scala]
+[subs="attributes"]
+----
+import de.tototec.sbuild._
+
+@version("0.7.1.9000")
+@classpath("mvn:org.sbuild:org.sbuild.plugins.asciidoctor:{pluginversion}")
+class SBuild(implicit _project: Project) {
+
+  import org.sbuild.plugins.asciidoctor._
+  Plugin[Asciidoctor]
+
+}
+----
+
+== Changelog
+
+=== SBuild Asciidoctor Plugin 0.1.0
+
+* Initial Release
