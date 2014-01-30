@@ -1,4 +1,4 @@
-= SBuild Adept Plugin
+= SBuild Asciidoctor Plugin
 :pluginversion: 0.0.9000
 
 This SBuild plugin integrates http://asciidoctor.org[Asciidoctor] into http://sbuild.tototec.de[SBuild].
