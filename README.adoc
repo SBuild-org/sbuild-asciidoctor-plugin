@@ -56,6 +56,6 @@ class SBuild(implicit _project: Project) {
 
 == Changelog
 
-=== SBuild Asciidoctor Plugin 0.1.0
+=== SBuild Asciidoctor Plugin 0.1.0 - _not released yet_
 
 * Initial Release
