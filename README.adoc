@@ -1,5 +1,6 @@
 = SBuild Asciidoctor Plugin
-:pluginversion: 0.0.9000
+:pluginversion: 0.1.0
+:sbuildversion: 0.7.1
 
 This SBuild plugin integrates http://asciidoctor.org[Asciidoctor] into http://sbuild.tototec.de[SBuild].
 
@@ -29,7 +30,7 @@ You will find the built jar in the directory `org.sbuild.plugins.asciidoctor/tar
 
 == Requirements
 
-This plugin requires at least SBuild 0.7.1.
+This plugin requires at least SBuild {sbuildversion}.
 
 == Configuration
 
@@ -44,7 +45,7 @@ Minimal example, which will generate a jbake site from `src/asciidoc` to `target
 ----
 import de.tototec.sbuild._
 
-@version("0.7.1.9000")
+@version("{sbuildversion}")
 @classpath("mvn:org.sbuild:org.sbuild.plugins.asciidoctor:{pluginversion}")
 class SBuild(implicit _project: Project) {
 

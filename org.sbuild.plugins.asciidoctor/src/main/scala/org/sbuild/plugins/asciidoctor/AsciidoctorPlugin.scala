@@ -27,7 +27,7 @@ class AsciidoctorPlugin(implicit project: Project) extends Plugin[Asciidoctor] {
       if (!adoc.attributes.isEmpty)
         adoc.attributes.map {
           case (k, v) =>
-          // TODO
+            cmdline ++= Seq("-a", if (v.isEmpty()) k else s"$k=$v")
         }
       if (adoc.compactOutput) cmdline ++= Seq("--compact")
       if (adoc.verbose) cmdline ++= Seq("--verbose")
